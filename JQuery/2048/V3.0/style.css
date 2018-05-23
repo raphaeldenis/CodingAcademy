@@ -1,0 +1,73 @@
+body {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    background-color: royalblue;
+    margin: auto;
+    border-radius: 4px;
+}
+
+.box {
+    padding: 13px;
+    text-align: left;
+    color: black;
+    font-size: 1.5em;
+    background-color: blue;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px blueviolet;
+}
+
+.space {
+    height: 50px;
+}
+
+.points {
+    float: right;
+    min-width: 160px;
+}
+
+.reset {
+    float: left;
+}
+
+.empty {
+    background-color: #f8f1e5;
+    position: absolute;
+}
+
+.active {
+    color: black;
+    position: absolute;
+    box-shadow: 3px 3px 5px #dcc9a3;
+    text-align: center;
+    display: table;
+    font-size: 2em;
+    z-index: 2;
+}
+
+.active>p {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.endgame {
+    position: absolute;
+    top: -160px;
+    margin: -8px;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    background-color: #F9BA32;
+    color: #fefdfc;
+    z-index: 4;
+    font-size: 2.5em;
+    display: table;
+    opacity: 0.92;
+}
+
+.endgame>p {
+    display: table-cell;
+    vertical-align: middle;
+}
