@@ -3,19 +3,14 @@
 const Hapi = require('hapi');
 const Hoek = require('hoek');
 const Settings = require('./settings');
+const Routes = require('./lib/routes');
 
 const server = new Hapi.Server({
     host: 'localhost',
     port: Settings.port
 });
 
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: (request, reply) => {
-        return('Hello, world!');
-    }
-});
+server.route(Routes);
 
 server.start((err) => {
     Hoek.assert(!err, err);
