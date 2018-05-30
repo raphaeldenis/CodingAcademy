@@ -4,14 +4,16 @@ const Hapi = require('hapi');
 const Hoek = require('hoek');
 const Settings = require('./settings');
 
-const server = new Hapi.Server();
-server.connection({ port: Settings.port });
+const server = new Hapi.Server({
+    host: 'localhost',
+    port: Settings.port
+});
 
 server.route({
     method: 'GET',
     path: '/',
     handler: (request, reply) => {
-        reply('Hello, world!');
+        return('Hello, world!');
     }
 });
 
