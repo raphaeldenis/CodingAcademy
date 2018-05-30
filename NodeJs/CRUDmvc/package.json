@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^5.0.1",
     "hapi": "^17.5.0",
     "hoek": "^5.0.3"
   }
