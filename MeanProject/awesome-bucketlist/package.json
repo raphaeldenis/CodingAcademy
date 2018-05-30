@@ -1,0 +1,21 @@
+{
+  "name": "awesome-bucketlist",
+  "version": "1.0.0",
+  "description": "first try mean",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "~4.16.0",
+    "mongoose": "~4.11.0",
+    "cors": "~2.8.3",
+    "body-parser": "~1.17.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://raphaeldenis.github.io/CodingAcademy/"
+  },
+  "author": "raphael DENIS",
+  "license": "ISC"
+}
