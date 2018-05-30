@@ -1,4 +1,5 @@
 # CodingAcademy
-Projects done during formation
+
+Side Projects
 
 Currently working on nodeJS CRUD MVC style!
