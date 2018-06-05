@@ -12,6 +12,7 @@
         ],
         "noImplicitAny": true,
         "suppressImplicitAnyIndexErrors": true,
-        "removeComments": false
+        "removeComments": false,
+        "outDir": "dist"
     }
 }

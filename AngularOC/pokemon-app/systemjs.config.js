@@ -11,7 +11,7 @@
         // L'option map permet d'indiquer à SystemJS l'emplacement des éléments charger les éléments
         map: {
             // notre application se trouve dans le dossier 'app'
-            app: 'app',
+            app: 'dist',
 
             // packets angular
             '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
