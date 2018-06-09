@@ -1,22 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+//Model recuperation which help types variables
 import { Pokemon } from './pokemon';
+//add CONST POKEMONS
 import { POKEMONS } from './mock.pokemon';
 
 @Component({
     selector:'pokemon-app',
-    template: '<h1>Pokemon</h1>',
+    template: '<h1>Pokemon test</h1>',
 })
 export class AppComponent implements OnInit { 
 
-    //get data from external file
+    //attribute declaration
     pokemons: Pokemon[] = null;
 
-    //on init, charge data from const POKEMONS to modele pokemons
+    //init attribute pokemons of component with values importe from mock.pokemons.ts
     ngOnInit() {
         this.pokemons = POKEMONS;
     }
 
-    //on event selectPokemon, display consolelog
+    //on event selectPokemon, display consolelog with pokenom name
     selectPokemon(pokemon: Pokemon) {
         console.log('VOus avez selectionné ' +pokemon.name);
     }
