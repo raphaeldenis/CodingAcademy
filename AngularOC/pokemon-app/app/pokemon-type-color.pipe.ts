@@ -51,8 +51,10 @@ export class PokemonTypeColorPipe implements PipeTransform {
                 color = 'grey';
                 break;
         }
+        //the space after chip is vital (color not displayed otherwise, check why!)
+        return 'chip ' + color;
 
-        return 'chip' + color;
+
 
     }
 }
