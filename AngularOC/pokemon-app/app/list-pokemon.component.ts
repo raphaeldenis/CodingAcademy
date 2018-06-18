@@ -10,7 +10,7 @@ import { ActivatedRoute, Router, Params, ActivatedRouteSnapshot } from '@angular
     selector: 'list-pokemon',
     templateUrl: './app/templates/list-pokemon.component.html',
 })
-export class ListAppComponent implements OnInit {
+export class ListPokemonComponent implements OnInit {
 
     //attribute declaration
     pokemons: Pokemon[] = null;
