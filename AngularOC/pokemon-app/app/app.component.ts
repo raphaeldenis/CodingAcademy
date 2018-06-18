@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 //indicate to Angular a component is a class
 @Component({
     selector:'pokemon-app',
-    templateUrl: './app/templates/app.component.html',
+    template: `<router-outlet></router-outlet>`
 })
 export class AppComponent {}
 

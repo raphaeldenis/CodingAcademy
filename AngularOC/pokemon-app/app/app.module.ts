@@ -12,7 +12,7 @@ import { ShadowCardDirective} from './shadow-card.directive'; //import our direc
 import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 
 @NgModule({
-    imports:      [ BrowserModule ],
+    imports: [BrowserModule, AppRoutingModule ],
     //declare component/directive in root app module
     declarations: [ 
         AppComponent,

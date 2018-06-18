@@ -8,7 +8,27 @@ import { ActivatedRoute, Router, Params, ActivatedRouteSnapshot } from '@angular
 //indicate to Angular a component is a class
 @Component({
     selector: 'list-pokemon',
-    templateUrl: './app/templates/list-pokemon.component.html',
+    template: `
+    <h1 class='center'>Pokémons</h1>
+      <div class='container'>
+        <div class="row">
+        <div *ngFor='let pokemon of pokemons' class="col s6 m4">
+          <div class="card horizontal" (click)="selectPokemon(pokemon)" pkmn-shadow-card>
+            <div class="card-image">
+              <img [src]="pokemon.picture">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>{{ pokemon.name }}</p>
+                <p><small>{{ pokemon.created | date:"dd/MM/yyyy" }}</small></p>
+                <span *ngFor='let type of pokemon.types' class="{{ type | pokemonTypeColor }}">{{ type }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+  `
 })
 export class ListPokemonComponent implements OnInit {
 
