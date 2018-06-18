@@ -14,8 +14,11 @@
                         <p>{{ pokemon.name }}</p>
                         <p>
                             <!-- INTERPOLATION!! -->
-                            <small>{{ pokemon.created }}</small>
+                            <!-- Adding pipe for dates, with format OK-->
+                            <small>{{ pokemon.created | date:"dd/MM/yyyy" }}</small>
                         </p>
+                        <!--adding directive ngFor to display the type of a given pokemon-->
+                        <span *ngFor='let type of pokemon.types' class="{{ type | pokemonTypeColor }}">{{ type }}</span>
                     </div>
                 </div>
             </div>
