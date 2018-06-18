@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './page-not-found.component';
 import { ShadowCardDirective} from './shadow-card.directive'; //import our directive
 import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 
+
 @NgModule({
     imports: [BrowserModule, AppRoutingModule ],
     //declare component/directive in root app module
