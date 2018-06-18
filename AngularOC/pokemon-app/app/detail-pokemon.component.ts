@@ -3,6 +3,11 @@ import { ActivatedRoute, Router, Params, ActivatedRouteSnapshot } from '@angular
 import { Pokemon } from './pokemon';
 import { POKEMONS } from './mock.pokemon';
 
+@Component({
+    selector: 'detail-pokemon',
+    templateUrl: './app/templates/detail-pokemon.component.html',
+})
+
 export class DetailPokemonComponent implements OnInit {
 
     pokemons: Pokemon[] = null; //List of pokemons 
@@ -33,5 +38,10 @@ export class DetailPokemonComponent implements OnInit {
     goBack(): void {
         this.router.navigate(['/pokemons']);
     }
+
+    // //Autre méthode
+    // goBack(): void {
+    //     window.history.back();
+    // }
 
 }
