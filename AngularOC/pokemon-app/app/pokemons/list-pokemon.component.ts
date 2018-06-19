@@ -26,21 +26,30 @@ import { PokemonsService } from './pokemons.services';
         </div>
         </div>
       </div>
-  `
+  `,
+  providers: [PokemonsService]
 })
+//is OnInit Needed? TO TEST!!
 export class ListPokemonComponent implements OnInit {
 
     pokemons: Pokemon[] = null;
+    
 
     constructor(
       private router: Router,
       //Injected instance of PokemonsService in our component!!
       //Unique instance of our service through all others potentialy components
       private pokemonsService: PokemonsService) {}
+      // available through:let pokemonsService: PokemonsService = this.pokemonsServices;
 
     ngOnInit(): void {
         this.pokemons = POKEMONS;
     }
+
+    getPokemons(): void {
+      this.pokemons = this.pokemonsService.getPokemons();
+    }
+    
 
     selectPokemon(pokemon: Pokemon): void {
         console.log('Vous avez selectionné ' + pokemon.name);

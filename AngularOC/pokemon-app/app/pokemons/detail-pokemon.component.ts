@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, Params } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Pokemon } from './pokemon';
-import { POKEMONS } from './mock.pokemons';
+import { PokemonsService } from './pokemons.services';
 
 @Component({
     selector: 'detail-pokemon',
@@ -50,28 +50,29 @@ import { POKEMONS } from './mock.pokemons';
   </div>
   </div>
   <h4 *ngIf='!pokemon' class="center">Aucun pokémon à afficher !</h4>
-  `
+  `,
+  providers: [PokemonsService]
 })
 export class DetailPokemonComponent implements OnInit {
 
-    pokemons: Pokemon[] = null;
     pokemon: Pokemon = null;
 
-    constructor(private route: ActivatedRoute, private router: Router) { }
+    constructor(
+      private route: ActivatedRoute,
+      //private router: Router, //NEEDED? TO TEST!!
+      //injecting service
+      private pokemonsService: PokemonsService) {}
 
     ngOnInit(): void {
-        this.pokemons = POKEMONS;
-
-        let id = +this.route.snapshot.params['id'];
-        for (let i = 0; i < this.pokemons.length; i++) {
-            if (this.pokemons[i].id == id) {
-                this.pokemon = this.pokemons[i];
-            }
-        }
+        this.route.params.forEach((params: Params) => {
+          let id = +params['id'];
+          //using service to get a pokemon according to id
+          this.pokemon = this.pokemonsService.getPokemon(id);
+        });
     }
 
     goBack(): void {
-        this.router.navigate(['/pokemons']);
+        window.history.back();
     }
 
 }
