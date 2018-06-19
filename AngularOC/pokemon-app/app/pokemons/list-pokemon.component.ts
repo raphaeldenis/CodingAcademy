@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Pokemon } from './pokemon';
 import { POKEMONS } from './mock.pokemons';
 import { Router } from '@angular/router';
+import { PokemonsService } from './pokemons.services';
 
 @Component({
     selector: 'list-pokemon',
@@ -31,7 +32,11 @@ export class ListPokemonComponent implements OnInit {
 
     pokemons: Pokemon[] = null;
 
-    constructor(private router: Router) { }
+    constructor(
+      private router: Router,
+      //Injected instance of PokemonsService in our component!!
+      //Unique instance of our service through all others potentialy components
+      private pokemonsService: PokemonsService) {}
 
     ngOnInit(): void {
         this.pokemons = POKEMONS;
