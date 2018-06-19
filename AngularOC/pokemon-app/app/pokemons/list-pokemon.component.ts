@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from './pokemon';
-import { POKEMONS } from './mock.pokemon';
+import { POKEMONS } from './mock.pokemons';
 import { Router } from '@angular/router';
 
 @Component({
