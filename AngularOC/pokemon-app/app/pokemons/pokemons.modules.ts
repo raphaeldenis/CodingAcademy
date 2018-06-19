@@ -26,4 +26,4 @@ import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
     //empty array where we'll declare specific services for our pokemon modules
     providers: []
 })
-export class PokemonsModule {}
+export class PokemonsModule { }
