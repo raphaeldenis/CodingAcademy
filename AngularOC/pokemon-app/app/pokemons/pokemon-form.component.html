@@ -11,7 +11,11 @@
                         required
                         [(ngModel)]="pokemon.name" name="name" 
                         #name="ngModel">
+                <!-- error -->
+                <div [hidden]="name.valid || name.pristine" class="card-panel red accent-1">
+                    Le nom du pokémon est requis (1-25).
                 </div>
+            </div>
 
                 <!-- Pokemon picture -->
                 <div class="form-group">
@@ -21,6 +25,10 @@
                         required
                         [(ngModel)]="pokemon.picture" name="picture" 
                         #picture="ngModel">
+                    <!-- error -->
+                    <div [hidden]="picture.valid || picture.pristine" class="card-panel red accent-1">
+                        Une photo/image est nécessaire.
+                    </div>
                 </div>
 
                 <!-- Pokemon hp -->
@@ -31,6 +39,10 @@
                         required
                         [(ngModel)]="pokemon.hp" name="hp" 
                         #hp="ngModel">
+                        <!-- error -->
+                        <div [hidden]="hp.valid || hp.pristine" class="card-panel red accent-1">
+                            Il faut des points de vie.
+                        </div>
                 </div>
 
                 <!-- Pokemon cp -->
@@ -41,6 +53,10 @@
                         required
                         [(ngModel)]="pokemon.cp" name="cp" 
                         #cp="ngModel">
+                        <!-- error -->
+                        <div [hidden]="cp.valid || cp.pristine" class="card-panel red accent-1">
+                            Rentrer un nombre de points Combo.
+                        </div>
                 </div>
 
                 <!-- Pokemon types -->

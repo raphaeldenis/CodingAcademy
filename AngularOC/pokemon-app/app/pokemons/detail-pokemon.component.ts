@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Pokemon } from './pokemon';
 import { PokemonsService } from './pokemons.services';
 
@@ -39,6 +39,13 @@ import { PokemonsService } from './pokemons.services';
               <td>Date de création</td>
               <td><em>{{ pokemon.created | date:"dd/MM/yyyy" }}</em></td>
             </tr>
+                <!-- ... -->
+  <div class="card-action">
+    <a (click)="goBack()">Retour</a>
+    <!-- On rajoute un lien vers la page d'édition de ce pokémon -->
+    <a (click)="goEdit(pokemon)">Editer</a>
+  </div>
+  <!-- ... -->
           </tbody>
         </table>
       </div>
@@ -58,7 +65,7 @@ export class DetailPokemonComponent implements OnInit {
 
     constructor(
       private route: ActivatedRoute,
-      //private router: Router, //NEEDED? TO TEST!!
+      private router: Router,
       //injecting service
       private pokemonsService: PokemonsService) {}
 
@@ -72,6 +79,12 @@ export class DetailPokemonComponent implements OnInit {
 
     goBack(): void {
         window.history.back();
+    }
+
+    // Method for redirection
+    goEdit(pokemon: Pokemon): void {
+      let link = ['/pokemon/edit', pokemon.id];
+      this.router.navigate(link);
     }
 
 }

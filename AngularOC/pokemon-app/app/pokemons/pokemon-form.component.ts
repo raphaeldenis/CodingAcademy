@@ -5,7 +5,8 @@ import { Pokemon } from './pokemon';
 
 @Component({
     selector: 'pokemon-form',
-    templateUrl: 'app/pokemons/pokemon-form.component.html'
+    templateUrl: 'app/pokemons/pokemon-form.component.html',
+    styleUrls: ['app/pokemons/pokemon-form.component.css']
 })
 export class PokemonFormComponent implements OnInit {
 
