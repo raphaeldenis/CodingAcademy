@@ -49,7 +49,6 @@ export class ListPokemonComponent implements OnInit {
       this.pokemons = this.pokemonsService.getPokemons();
     }
     
-
     selectPokemon(pokemon: Pokemon): void {
         console.log('Vous avez selectionné ' + pokemon.name);
         let link = ['/pokemon', pokemon.id];
