@@ -50,8 +50,7 @@ import { PokemonsService } from './pokemons.services';
   </div>
   </div>
   <h4 *ngIf='!pokemon' class="center">Aucun pokémon à afficher !</h4>
-  `,
-  providers: [PokemonsService]
+  `
 })
 export class DetailPokemonComponent implements OnInit {
 

@@ -26,8 +26,7 @@ import { PokemonsService } from './pokemons.services';
         </div>
         </div>
       </div>
-  `,
-  providers: [PokemonsService]
+  `
 })
 //is OnInit Needed? TO TEST!!
 export class ListPokemonComponent implements OnInit {
