@@ -8,7 +8,10 @@ import { MyNavComponent } from './my-nav/my-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
+// Why matformfieldmodule doesn t import Select and Input module?
 import { MatSelectModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+
 
 
 import { FirstPageComponent } from './first-page/first-page.component';
@@ -39,6 +42,7 @@ const appRoutes: Routes = [
     MatSidenavModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatInputModule,
     MatIconModule,
     MatListModule,
     MatCardModule
