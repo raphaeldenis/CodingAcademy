@@ -1,5 +1,7 @@
-# CodingAcademy
+# CodingAcademy (FROZEN)
 
-Side Projects
+Projects done during formation.
 
-Currently working on Angular.
+For algo, have a look at the sapin.
+
+Pokemon app is in AngularOC/pokemon-app
